@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vector Playground</title>
+  <meta name="description" content="Vector Playground — learn vectors by experimenting / Vektorları təcrübə edərək öyrən.">
+  <meta name="theme-color" content="#0a1128">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230a1128'/%3E%3Cpath d='M7 25 L23 9' stroke='%2322d3ee' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M16 8 L24 8 L24 16 Z' fill='%2322d3ee'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip" href="#app" data-i18n="nav.skip">Skip to content</a>
+
+  <header class="topbar">
+    <a class="brand" href="#/" aria-label="Vector Playground">
+      <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#101b3a"/><path d="M7 25 L22 10" stroke="#22d3ee" stroke-width="3" stroke-linecap="round"/><path d="M14 8 L24 8 L24 18 Z" fill="#22d3ee"/><path d="M7 25 L22 25" stroke="#fb923c" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="1 5"/></svg>
+      <span>Vector Playground</span>
+    </a>
+    <div class="topbar__right">
+      <div class="progress-pill" id="progressPill" role="img">
+        <span id="progText">0 / 8</span>
+        <div class="progressbar"><i id="progBar"></i></div>
+      </div>
+      <div class="langsw" role="group" data-i18n-aria="nav.language">
+        <button type="button" data-lang="az" aria-pressed="true">AZ</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <button type="button" class="btn btn--ghost btn--sm" id="resetBtn" data-i18n="nav.reset">Reset progress</button>
+    </div>
+    <nav class="nav" id="nav" data-i18n-aria="nav.modules"></nav>
+  </header>
+
+  <main id="app" tabindex="-1"></main>
+
+  <footer class="footer">
+    <p data-i18n="footer.text"></p>
+  </footer>
+
+  <dialog id="confirmDlg" aria-labelledby="resetTitle">
+    <h2 id="resetTitle" data-i18n="reset.title"></h2>
+    <p data-i18n="reset.text"></p>
+    <div class="btnrow">
+      <button type="button" class="btn btn--ghost" id="resetCancel" data-i18n="reset.cancel"></button>
+      <button type="button" class="btn btn--danger" id="resetOk" data-i18n="reset.ok"></button>
+    </div>
+  </dialog>
+
+  <div id="tooltip" role="tooltip" hidden></div>
+
+  <noscript><p style="padding:2rem;color:#fff">JavaScript is required / JavaScript tələb olunur.</p></noscript>
+
+  <!-- Plain scripts (no modules) so the app works straight from file:// -->
+  <script src="js/vector-engine.js"></script>
+  <script src="js/util.js"></script>
+  <script src="js/ui-strings.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/plane.js"></script>
+  <script src="js/simulations.js"></script>
+  <script src="js/physics.js"></script>
+  <script src="js/lessons.js"></script>
+  <script src="js/challenges.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
